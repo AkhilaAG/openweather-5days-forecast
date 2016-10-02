@@ -1,35 +1,21 @@
-var React= require('react');
-var ForecastData=require('./forecastData');
+var React = require('react');
 
 module.exports=React.createClass({
-  render:function(){
-     
-           var forecastArray=this.props.getWeather.list.map(function(item){
-           return <ForecastData key={item.dt} data={item}/>
-        }.bind(this));
-           
+    render: function(){
+        
+    
+    return  <div>
+          <table>
+      <tbody><tr><td className="date-width">{this.props.data.dt_txt} </td>
+						<td className="weather-width">{this.props.data.weather[0].description}</td>
+						<td className="temp-width">{this.props.data.main.temp_min} F</td>
+						<td className="temp-width">{this.props.data.main.temp_max} F</td>
+						<td className="temp-width">{this.props.data.main.pressure} hpa</td>
+						<td className="temp-width">{this.props.data.main.humidity}%</td></tr></tbody>
+        </table>
       
-        return <div>
-            <h2 className="h2-heading">5 days/3 hour weather forecast</h2>
-            <h2 className="h2-center">Weather in {this.props.getWeather.city.name},{this.props.getWeather.city.country}</h2>
-              <div>
-            <table>
-                  <thead>
-                <tr>
-                    <th className="date-width">Date</th>
-				<th className="weather-width">Cloudiness</th>
-					<th className="temp-width">Temparature(Min)</th>
-					<th className="temp-width">Temparature(Max)</th>
-					<th className="temp-width">Pressure</th>
-					<th className="temp-width">Humidity</th>
-                      </tr>
-                </thead>
-                  
-                  </table>
-            </div> 
-           <div>
-             {forecastArray}
-            </div>
+        
         </div>
-    }
+},
+
 })
