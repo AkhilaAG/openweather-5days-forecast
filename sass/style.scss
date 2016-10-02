@@ -1,0 +1,41 @@
+
+.h2-heading
+{
+    color: #d26c22;
+    text-align:center;
+}
+.h2-center
+{
+    text-align:center;
+}
+.date-width
+{
+    width: 150px;
+    padding-top:10px
+}
+.weather-width
+{
+    
+    width: 100px; 
+    text-align: left;
+}
+.temp-width
+{
+    width: 100px; 
+    text-align: right;
+}
+table>tbody>tr>td, table>tbody>tr>th, table>tfoot>tr>td, table>tfoot>tr>th,table>thead>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;}
+
+table {
+    margin: 0px auto;
+    
+}
+   
+tr:nth-child(even){
+    background-color: #f2f2f2}
+
+th{background-color: #ffa500;color: white;}
